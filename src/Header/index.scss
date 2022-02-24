@@ -1,0 +1,34 @@
+header {
+    border-bottom:5px solid $border-color;
+    & nav {
+      margin:0 auto;
+      min-width:$min-width;
+      max-width:$max-width;
+      text-align:center;
+      & img {
+        float:left;
+        width:40px;
+        padding:1em;
+      }
+      > a {
+        font-family: $head-font;
+        text-transform: uppercase;
+        margin:0.3em;
+        font-size:2em;
+        text-decoration:none;
+        color:$font-color;
+        padding:2em 0.5em;
+        padding-bottom:0.8em;
+        border-bottom: 5px solid $border-color;
+        &:hover {
+          border-bottom: 5px solid $red;
+          color: $red;
+        }
+      }
+      .active {
+        border-bottom: 5px solid $red;
+        background: $red;
+        color: $white;
+      }
+    }
+  }

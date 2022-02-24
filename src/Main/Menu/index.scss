@@ -1,0 +1,176 @@
+#menu {
+    text-transform:lowercase;
+    min-width:$min-width;
+    max-width:$max-width;
+    margin: 0 auto;
+    h2 {
+      margin:0;
+      padding:0;
+      font-size:18pt;
+      line-height:12pt;
+      margin:1em 0;
+      & span {
+        font-size:10pt;
+        font-weight:normal;
+        display:block;
+      }
+    }
+    #menu_container{
+      display: grid; 
+      grid-template-columns: 0.7fr 1.8fr;
+      grid-template-rows: minmax(100px, max-content);
+      gap:0em 1em;
+      grid-template-areas:
+        "app meal"
+        "soup plate"
+        "specials plate"
+        "beverages ramen"
+        "nonmenu ramen";
+      .step {
+        &:before{
+          display: inline-block;
+          width:1.5em;
+          height:1.5em;
+          text-align:center;
+          margin:0 0.5em 0 0;
+          border:2px solid $border-color;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          border-radius: 50%;
+        }
+      }
+      .meal, .plate-protein {
+        &:before {
+          content: '1';
+        }
+      }
+      .meal-protein, .plate-dressing {
+        &:before{
+          content: '2';
+        }
+      }
+      .size{
+        padding-left:2.5em;
+        & span {
+          font-weight:bold;
+          padding:0 0.5em 0 0;
+        }
+      }
+      #appetizer{grid-area:app;}
+      #soups{grid-area:soup;}
+      div[id='gangnam specials'] {grid-area:specials;}
+      div[id='gangnam meal'] {grid-area: meal;}
+      div[id='gangnam ramen']{grid-area:ramen;} 
+      div[id='gangnam plate'] {grid-area:plate;}
+      .dressing{
+        grid-area: dressing;
+        & li {
+          list-style:none;
+          padding:0;
+          margin:0;
+        }
+      }
+      #beverages {
+        grid-area:beverages;
+        border: 1px solid $border-color; 
+        padding:0.5em; 
+        margin: 0.5em 0; 
+        height: min-content;
+        .description{
+          display:grid;
+          grid-template-columns: 1.2fr 0.8fr;
+          font-size:0.9em;
+        }
+        h2{margin-top:0}
+      }
+      #nonmenu {
+        grid-area:nonmenu;
+        text-align:center;
+        .download {
+          display: inline-block;
+          vertical-align: top;
+          text-transform: uppercase;
+          text-decoration: none;
+          color: $red;
+          font-family: $head-font;
+          text-align: center;
+          position: relative;
+          padding:0.5em 1.5em;
+          margin: 0.5em;
+          font-size:1.3em;
+          border: 2px solid $red;
+          border-radius: 4px;
+          overflow: hidden;
+          background-position: -100% -100%;
+          -webkit-transition: all 0.3s ease-out;
+                  transition: all 0.3s ease-out;
+          &:hover {
+            background-color:$red;
+            color: $white;
+          }
+        }
+        #legend {
+          height: min-content; 
+          border:1px solid $border-color;
+          padding:0.5em;
+          font-size:0.8em;
+          & span {
+            margin:0 0.5em 0 0;
+            &:before{margin:0 0.5em 0 0;}
+          }
+        }
+      }
+      .item {
+        display: grid; 
+        grid-template-columns: 1.2fr 0.8fr;
+        margin: 0.5em 1em; 
+        grid-template-areas: 
+          "item-name price"
+          "description description"; 
+        .item-name {
+          grid-area: item-name; 
+          font-weight:bold;
+          & span, .description span {padding:0em 0.2em;}
+        }
+      }
+      .price {
+        grid-area: price; 
+        text-align:right; 
+        font-weight:bold;
+        & span {
+          display: inline-block;
+          width: 5em;
+        }
+      }
+      .description {grid-area: description;}
+      .spicy:before{
+        font-family: $fa-font;
+        font-weight:bold;
+        content:'\f06d';
+        color:$red;
+      }
+      .vegan:before{
+        font-family: $fa-font;
+        font-weight:bold;
+        content:'\f06c';
+        color:$green;
+      }
+      .glutenfree:before{
+        display: inline-block;
+        width:15px;
+        height:15px;
+        font-family: $fa-font;
+        font-weight:bold;
+        text-transform:uppercase;
+        content:'gf';
+        color:$gluten;
+        border: 2px solid $gluten;
+        padding:0.1em;
+        font-size:0.6em;
+        text-align:center;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+      }
+    }
+  }

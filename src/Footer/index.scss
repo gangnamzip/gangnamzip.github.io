@@ -1,0 +1,73 @@
+footer{
+    border-top:5px solid $border-color;
+    padding:1em;
+    text-align:center;
+    #footer{
+      margin:0 auto;
+      min-width:1080px;
+      max-width:1200px;
+      display: grid; 
+      grid-template-columns: 0.6fr 1.6fr 0.8fr; 
+      grid-template-areas: 
+        "social information order"; 
+    }
+    a, a:hover {
+      border:none;
+    }
+    .social { 
+      grid-area: social; 
+      padding:1em 0.5em;
+      > a {
+        color: #97cd6c;
+        font-size:1.5em;
+        margin:0.5em;
+        transition: 0.5s all ease;
+      }
+      & .facebook:hover {
+        color: #4267B2;
+      }
+      & .instagram:hover {
+        background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+      -webkit-background-clip: text;
+              background-clip: text;
+      -webkit-text-fill-color: transparent;
+      }
+      & .yelp:hover{
+        color:#c41200;
+      }
+      & .tripadvisor:hover{
+        color: #00af87;
+      }
+    }
+    .information {
+      grid-area: information;
+      font-family: $default-font;
+      text-transform:uppercase;
+      text-align:center;
+      font-size:1em;
+      & .contact {
+        & a {
+          color:#333;
+          text-decoration:none;
+          transition: 0.5s all ease;
+          &:hover{
+            color:#97cd6c;
+          }
+        }
+        span {
+          border:none;
+        }
+      }
+      & div{
+        margin:0.5em;
+      }
+      & span{
+        border-right:1px solid #97cd6c;
+        padding:0.2em 0.5em;
+        &:last-child {
+          border:none;
+        }
+      }
+    }
+    .order { grid-area: order; }
+  }
