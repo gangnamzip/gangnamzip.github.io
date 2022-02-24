@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/gangnamzip.github.io/static/css/main.f1550f6c.css",
-    "main.js": "/gangnamzip.github.io/static/js/main.bf0b1d8a.js",
-    "static/media/logo.svg": "/gangnamzip.github.io/static/media/logo.1f481b56a80cf95326809a50a751606a.svg",
-    "index.html": "/gangnamzip.github.io/index.html",
-    "static/media/location.svg": "/gangnamzip.github.io/static/media/location.2f1761134dc3ebc9d58ed8661a400991.svg",
-    "main.f1550f6c.css.map": "/gangnamzip.github.io/static/css/main.f1550f6c.css.map",
-    "main.bf0b1d8a.js.map": "/gangnamzip.github.io/static/js/main.bf0b1d8a.js.map"
+    "main.css": "/static/css/main.7c57951b.css",
+    "main.js": "/static/js/main.d4fec6a7.js",
+    "static/media/logo.svg": "/static/media/logo.1f481b56a80cf95326809a50a751606a.svg",
+    "index.html": "/index.html",
+    "static/media/location.svg": "/static/media/location.2f1761134dc3ebc9d58ed8661a400991.svg",
+    "main.7c57951b.css.map": "/static/css/main.7c57951b.css.map",
+    "main.d4fec6a7.js.map": "/static/js/main.d4fec6a7.js.map"
   },
   "entrypoints": [
-    "static/css/main.f1550f6c.css",
-    "static/js/main.bf0b1d8a.js"
+    "static/css/main.7c57951b.css",
+    "static/js/main.d4fec6a7.js"
   ]
 }
